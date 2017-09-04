@@ -1,0 +1,37 @@
+
+
+.cartao	{
+  background: #EBEF40;
+  margin: 16px;
+  padding: 16px;
+}
+
+@media (min-width: 590px) {
+  .cartao	{
+    display:	inline-block;
+
+    width: 190px;
+    box-sizing: border-box;
+    vertical-align: top;
+    flex-basis: 190px;
+    flex-grow: 1;
+  }
+
+  .mural{
+    text-align: center;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .mural--linha{
+
+    flex-direction: column;
+  }
+  .mural--linha .cartao{
+
+    width: auto;
+    flex-basis: auto;
+    display:block;
+  }
+}
