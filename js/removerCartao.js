@@ -1,11 +1,12 @@
-var botoes =  document.querySelectorAll('.cartao-botao')
+var botoes =  document.querySelectorAll('.opcoesDoCartao-remove')
 
 for (var i = 0; i < botoes.length; i++) {
   botoes[i].addEventListener('click', removeCartao)
 }
 function removeCartao(){
-
-  console.log(this.parentNode);
-  this.parentNode.style.display='none'
-  //document.querySelector('.cartao').style.display='none'
+  var cartao = document.querySelector('#cartao_'+this.dataset.ref)
+  cartao.classList.add('cartao--some')
+  setTimeout(function(){
+    cartao.remove()
+  }, 200)
 }

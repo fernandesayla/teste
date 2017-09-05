@@ -1,6 +1,6 @@
 .cartao {
 	margin: 32px 16px;
-  	padding: 16px;
+	padding: 16px;
 	line-height: 1.5;
 	position: relative;
 	word-wrap: break-word;
@@ -9,6 +9,11 @@
 	box-shadow: 1px 1px 1px rgba(0,0,0,.1);
 }
 
+
+.cartao--some{
+	transition: 300ms;
+	opacity: 0;
+}
 @media (min-width: 560px){
 
 	.cartao {

@@ -1,10 +1,16 @@
 
 
+
 .cartao	{
   background: #EBEF40;
   margin: 16px;
   padding: 16px;
 }
+
+#mudaLayout	{
+        display:	none;
+}
+
 
 @media (min-width: 590px) {
   .cartao	{
@@ -17,6 +23,9 @@
     flex-grow: 1;
   }
 
+  #mudaLayout	{
+          display:	inline-block;
+  }
   .mural{
     text-align: center;
     display: flex;
