@@ -7,65 +7,50 @@
   <title>Creep</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mural.css">
+  <link rel="stylesheet" href="css/opcoesDoCartao.css">
 </head>
 <body>
-  <header class="cabecalho container">
-    <h1>Creep</h1>
-    <nav>
-      <button id="mudaLayout" type="button" name="button" onclick="mudaLayout()">Linhas</button>
-    </nav>
-  </header>
+  <header	class="cabecalho	container">
+    <h1	class="cabecalho-logo">Creep</h1>
+    <div	class="opcoesDaPagina">
+      <button	id="mudaLayout"
+      class="opcoesDaPagina-opcao	opcoesDaPagina-botao"	>
+      Linhas
+    </button>
+  </div>
+</header>
 
-  <section class="mural container">
-    <div class="cartao">
-      <p class="cartao-conteudo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae doloribus nemo, veritatis, laudantium perspiciatis magni tempora quis sapiente sit temporibus sequi iste delectus enim dicta fugit. Quia dignissimos ex veniam.</p>
-    </div>
-    <div class="cartao">
-      <p class="cartao-conteudo">A corporis ut dolore consequatur. Ipsa, aspernatur distinctio placeat, a quae provident possimus cum quam dicta ad nobis voluptatum alias blanditiis vel, fuga velit sequi incidunt. Facere, inventore modi iure?</p>
-    </div>
-    <div class="cartao">
-      <p class="cartao-conteudo">Hic commodi, dolorem vel iusto doloremque aut ducimus eum iste veritatis illum quasi culpa excepturi laborum, non sequi distinctio minus, ipsa perferendis. Autem quos eius, adipisci itaque non! Architecto, accusamus?</p>
-    </div>
-    <div class="cartao">
-      <p class="cartao-conteudo">Ea, numquam! Perspiciatis in dolorum quibusdam vero ab neque dolorem rem nobis unde ex, itaque porro numquam nisi libero distinctio animi rerum doloribus, accusantium voluptatum sit amet suscipit excepturi. Earum.</p>
-    </div>
-    <div class="cartao">
-      <p class="cartao-conteudo">Hic illum, nihil eaque consequuntur deserunt, nostrum aliquam consectetur iste tempore perspiciatis. Eius rerum quisquam repellendus minus hic magnam, nisi voluptas odio? Vel impedit temporibus, consequuntur eum incidunt facere iusto!</p>
-    </div>
-  </section>
+<section class="mural container">
+  <div class="cartao">
 
+    <button type="button"   class="cartao-botao">X</button>
+    <p class="cartao-conteudo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae doloribus nemo, veritatis, laudantium perspiciatis magni tempora quis sapiente sit temporibus sequi iste delectus enim dicta fugit. Quia dignissimos ex veniam.</p>
+  </div>
+  <div class="cartao">
+  <button type="button"   class="cartao-botao">X</button>
+    <p class="cartao-conteudo">A corporis ut dolore consequatur. Ipsa, aspernatur distinctio placeat, a quae provident possimus cum quam dicta ad nobis voluptatum alias blanditiis vel, fuga velit sequi incidunt. Facere, inventore modi iure?</p>
+  </div>
+  <div class="cartao">
+  <button type="button"   class="cartao-botao">X</button>
+    <p class="cartao-conteudo">Hic commodi, dolorem vel iusto doloremque aut ducimus eum iste veritatis illum quasi culpa excepturi laborum, non sequi distinctio minus, ipsa perferendis. Autem quos eius, adipisci itaque non! Architecto, accusamus?</p>
+  </div>
+  <div class="cartao">
+  <button type="button"   class="cartao-botao">X</button>
+    <p class="cartao-conteudo">Ea, numquam! Perspiciatis in dolorum quibusdam vero ab neque dolorem rem nobis unde ex, itaque porro numquam nisi libero distinctio animi rerum doloribus, accusantium voluptatum sit amet suscipit excepturi. Earum.</p>
+  </div>
+  <div class="cartao">
+  <button type="button"   class="cartao-botao">X</button>
+    <p class="cartao-conteudo">Hic illum, nihil eaque consequuntur deserunt, nostrum aliquam consectetur iste tempore perspiciatis. Eius rerum quisquam repellendus minus hic magnam, nisi voluptas odio? Vel impedit temporibus, consequuntur eum incidunt facere iusto!</p>
+  </div>
+</section>
 
-  <script >
-  function mudaLayout() {
-
-    var mural = document.querySelector('.mural');
-    //document.querySelector(".mural").classList.toggle("mural--linhas")
-
-    mural.classList.toggle("mural--linhas");
-    //Muda	o	texto	do	botão
-    if	(mural.classList.contains("mural--linhas")){
-      this.textContent	=	"Blocos";
-    }	else	{
-      this.textContent	=	"Linhas";
-    }
-    /*  var btn = document.querySelector('#mudaLayout');
-    var mural = document.querySelector('.mural');
-
-    if(mural.classList.contains('mural--linha')){
-    mural.classList.remove('mural--linha');
-    btn.textContent='linha'
-
-  }else {
-  mural.classList.add('mural--linha');
-  btn.textContent='bloco'
-}*/
+<script src="js/removerCartao.js" ></script>
+<script src="js/principal.js" ></script>
 
 
 
 
 
-});
 
-</script>
 </body>
 </html>
