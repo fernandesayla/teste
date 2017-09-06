@@ -16,14 +16,23 @@
 }
 
 .opcoesDaPagina-botao {
-	padding: .5em;
-	max-width: 4.5em;
 	border: none;
-	background: rgba(0,0,0,.25);
+	background: rgba(0,0,0,0);
 	color: white;
+	background-size: 24px 24px;
+	background-repeat: no-repeat;
+	flex: 0 0 auto;
+	height: 48px;
+	width: 48px;
+	background-image: url(../img/blocos_branco.svg);
 }
 
 .opcoesDaPagina-opcao#busca {
 	border: none;
 	padding: .2em;
+}
+
+.icon--linha{
+	background-image: url(../img/linhas_branco.svg);
+
 }

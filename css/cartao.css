@@ -8,8 +8,6 @@
 	background: #EBEF40;
 	box-shadow: 1px 1px 1px rgba(0,0,0,.1);
 }
-
-
 .cartao--some{
 	transition: 300ms;
 	opacity: 0;
@@ -24,4 +22,22 @@
 		vertical-align: top;
 	}
 
+}
+
+@media	(min-width:	560px){
+	.cartao--textoPequeno	{
+		font-size:	1em;
+		width:	11em;
+		flex-basis:	11em;
+	}
+	.cartao--textoMedio	{
+		font-size:	1.5em;
+		width:	9em;
+		flex-basis:	9em;
+	}
+	.cartao--textoGrande	{
+		font-size:	2em;
+		width:	6em;
+		flex-basis:	6em;
+	}
 }
