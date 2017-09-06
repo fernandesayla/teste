@@ -8,17 +8,23 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mural.css">
   <link rel="stylesheet" href="css/cartao.css">
-
   <link	rel="stylesheet" href="css/cabecalho.css">
   <link	rel="stylesheet" href="css/opcoesDaPagina.css">
-<link	rel="stylesheet" href="css/opcoesDoCartao.css">
+  <link	rel="stylesheet" href="css/opcoesDoCartao.css">
 </head>
 <body>
   <header	class="cabecalho container">
     <h1	class="cabecalho-logo">Creep</h1>
+    <div class="busca">
+      <input	type="search"	id="busca"	placeholder="Busca" class="inputBusca">
+    </div>
     <div	class="opcoesDaPagina">
       <button	id="mudaLayout" class="opcoesDaPagina-opcao	opcoesDaPagina-botao">
-
+      </button>
+    </div>
+    <div	 >
+      <button	id="ajuda" >
+Help
       </button>
     </div>
   </header>
@@ -61,13 +67,14 @@
       <p class="cartao-conteudo">Hic illum, nihil eaque consequuntur deserunt, nostrum aliquam consectetur iste tempore perspiciatis. Eius rerum quisquam repellendus minus hic magnam, nisi voluptas odio? Vel impedit temporibus, consequuntur eum incidunt facere iusto!</p>
     </div>
   </section>
-<script	src="js/lib/jquery.js"></script>
+  <script	src="js/lib/jquery.js"></script>
   <script src="js/removerCartao.js" ></script>
   <script src="js/mudaLayout.js" ></script>
-<script src="js/novoCartao.js" ></script>
-<script src="js/decideTipoCartao.js" ></script>
-
-
+  <script src="js/novoCartao.js" ></script>
+  <script src="js/decideTipoCartao.js" ></script>
+  <script src="js/principal.js" ></script>
+<script src="js/ajuda.js" ></script>
+<script src="js/controladorDeCartao.js" ></script>
 
 
 </body>

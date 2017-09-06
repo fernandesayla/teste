@@ -1,18 +1,7 @@
+  var contator = $('.cartao').length
 
-;(function() {
-  'use strict'
+function adicionaCartao(conteudo){
 
-
-  $('.novoCartao').on('submit',function(event){
-
-
-    event.preventDefault()
-    var conteudo = $('.novoCartao-conteudo').val().trim().replace(/\n/g,'<br>')
-    if(conteudo){
-      adicionaCartao(conteudo)
-    }
-
-    /*  if(conteudo){conteudo
     var	tipoCartao = decideTipoCartao(conteudo);
     var cartao = $('<div>').addClass('cartao').addClass(tipoCartao).attr('id','cartao_'+contator)
     var divBtnRemove = $('<div>').addClass('opcoesDoCartao')
@@ -24,19 +13,24 @@
 
     $('.novoCartao-conteudo').val('')
 
-  }*/
+
+}
+/*
+function submit(){
+
+
+}
+
+
+function getConteudo{
+
+}
 
 
 
-})
 
-})()
-
-//{ 3 + 1 } + -3 // -3
+;(function() {
 
 
-/*, function(event) {
-event.preventDefault()
-console.log(document.querySelector('.novoCartao-conteudo').value);
-})
-*/
+
+})()*/

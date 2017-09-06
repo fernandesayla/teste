@@ -19,17 +19,20 @@
 	border: none;
 	background: rgba(0,0,0,0);
 	color: white;
-	background-size: 24px 24px;
+	background-size: cover;
 	background-repeat: no-repeat;
 	flex: 0 0 auto;
 	height: 48px;
 	width: 48px;
 	background-image: url(../img/blocos_branco.svg);
 }
+opcoesDaPagina-botao:hover{
+	background: rgba(0,0,0,0);
 
+}
 .opcoesDaPagina-opcao#busca {
 	border: none;
-	padding: .2em;
+	/*padding: .2em;*/
 }
 
 .icon--linha{
