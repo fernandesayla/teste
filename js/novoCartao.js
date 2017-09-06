@@ -1,22 +1,20 @@
-var contator = $('cartao').length
+
+;(function() {
+'use strict'
+var contator = $('.cartao').length
 
 $('.novoCartao').on('submit',function(event){
+
  contator++
   event.preventDefault()
-
-  var conteudo = $('.novoCartao-conteudo').val()
+  var conteudo = $('.novoCartao-conteudo').val().trim().replace(/\n/g,'<br>')
 
   if(conteudo){
 
     var cartao = $('<div>').addClass('cartao').attr('id','cartao_'+contator)
-
     var divBtnRemove = $('<div>').addClass('opcoesDoCartao')
-
-    var btnRemove = $('<button>').addClass('').attr('data-ref',contator).text('X').click(removeCartao)
-
-
-
-    var tagConteudo = $('<p>').addClass('cartao-conteudo').text(conteudo)
+    var btnRemove = $('<button>').addClass('opcoesDoCartao-remove opcoesDoCartao-opcao').attr('data-ref',contator).text('X').click(removeCartao)
+    var tagConteudo = $('<p>').addClass('cartao-conteudo').append(conteudo)
 
     cartao.append(divBtnRemove).append(btnRemove).append(tagConteudo).prependTo('.mural')
 
@@ -24,6 +22,10 @@ $('.novoCartao').on('submit',function(event){
 
   }
 })
+
+})()
+
+//{ 3 + 1 } + -3 // -3
 
 
 /*, function(event) {

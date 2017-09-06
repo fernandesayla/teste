@@ -1,4 +1,5 @@
-
+;(function() {
+'use strict'
 
 document.querySelector("#mudaLayout").addEventListener("click",	function(){
   //Pega	o	elemento	com	a	class="mural"
@@ -11,4 +12,7 @@ document.querySelector("#mudaLayout").addEventListener("click",	function(){
   }	else	{
     this.textContent	=	"Linhas";
   }
-});
+})
+
+
+})()
