@@ -16,6 +16,20 @@
 }
 
 .opcoesDaPagina-botao {
+	padding: .5em;
+	max-width: 4.5em;
+	border: none;
+	background: rgba(0,0,0,.25);
+	color: white;
+}
+
+.opcoesDaPagina-opcao#busca {
+	border: none;
+	padding: .2em;
+}
+
+
+.opcoesDaPagina-botao#mudaLayout {
 	border: none;
 	background: rgba(0,0,0,0);
 	color: white;
@@ -32,10 +46,9 @@ opcoesDaPagina-botao:hover{
 }
 .opcoesDaPagina-opcao#busca {
 	border: none;
-	/*padding: .2em;*/
+	padding: .2em;
 }
-
-.icon--linha{
+.icon--linha#mudaLayout{
 	background-image: url(../img/linhas_branco.svg);
 
 }

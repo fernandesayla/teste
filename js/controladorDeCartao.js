@@ -2,15 +2,15 @@ var controladorDeCartao=(function() {
   'use strict'
 
 
-  var contator = $('.cartao').length
+  var contador = $('.cartao').length
 
   function adicionaCartao(conteudo, cor){
-    contator++
+    contador++
     var	tipoCartao = decideTipoCartao(conteudo);
-    var cartao = $('<div>').addClass('cartao').addClass(tipoCartao).attr('id','cartao_'+contator).css('background', cor)
+    var cartao = $('<div>').addClass('cartao').addClass(tipoCartao).attr('id','cartao_'+contador).css('background', cor)
     var divBtnRemove = $('<div>').addClass('opcoesDoCartao')
 
-    var btnRemove = $('<button>').addClass('opcoesDoCartao-remove opcoesDoCartao-opcao').attr('data-ref',contator).text('X').click(removeCartao)
+    var btnRemove = $('<button>').addClass('opcoesDoCartao-remove opcoesDoCartao-opcao').attr('data-ref',contador).text('X').click(removeCartao)
     var tagConteudo = $('<p>').addClass('cartao-conteudo').append(conteudo)
 
     cartao.append(divBtnRemove.append(btnRemove)).append(tagConteudo).prependTo('.mural')
@@ -46,28 +46,9 @@ var controladorDeCartao=(function() {
   }
 
   return {
-      adicionaCartao : adicionaCartao,
-      ultimoCartao :contator
+      adicionaCartao:adicionaCartao,
+      idUltimoCartao:contador
   }
 
 
 })()
-/*
-function submit(){
-
-
-}
-
-
-function getConteudo{
-
-}
-
-
-
-
-;(function() {
-
-
-
-})()*/
