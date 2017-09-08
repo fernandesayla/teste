@@ -9,7 +9,7 @@
     event.preventDefault()
     var conteudo = $('.novoCartao-conteudo').val().trim().replace(/\n/g,'<br>')
     if(conteudo){
-      adicionaCartao(conteudo)
+      controladorDeCartao.adicionaCartao(conteudo)
     }
 
     /*  if(conteudo){conteudo

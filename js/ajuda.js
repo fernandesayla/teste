@@ -1,10 +1,12 @@
 ;(function() {
   'use strict'
   $("#ajuda").on('click',function(){
-    var ListaAjuda=['No Creep be Creep', 'Mudar Linhas', 'Manipule seus cartões']
+    var ListaAjuda=[{conteudo:'No Creep be Creep',cor:'red'},
+    {conteudo:'Mudar Linhas', cor:'blue'},
+    {conteudo:'Manipule seus cartões', cor:'orange'}]
 
     ListaAjuda.forEach(function(ajudaAtual){
-        adicionaCartao(ajudaAtual)
+      controladorDeCartao.adicionaCartao(ajudaAtual.conteudo, ajudaAtual.cor)
 
     })
 
