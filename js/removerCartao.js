@@ -1,6 +1,6 @@
-/*;(function() {
+var removerCartao=(function() {
   'use strict'
-*/
+
   var botoes =  document.querySelectorAll('.opcoesDoCartao-remove')
 
   for (var i = 0; i < botoes.length; i++) {
@@ -11,7 +11,15 @@
     cartao.classList.add('cartao--some')
     setTimeout(function(){
       cartao.remove()
+      $(document).trigger('precisaSincronizar')
     }, 200)
+
+
   }
 
-/*})()*/
+  return {
+      removeCartao:removeCartao,
+
+  }
+
+})()

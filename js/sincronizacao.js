@@ -2,13 +2,13 @@
   'use strict'
 
   $.getJSON('http://ceep.herokuapp.com/cartoes/carregar?usuario=fernandes.ayla@gmail.com&callback=?',
-function(resposta){
+  function(resposta){
     resposta.cartoes.forEach(function(cartaoAtual){
       controladorDeCartao.adicionaCartao(cartaoAtual.conteudo, cartaoAtual.cor)
     })
   })
 
-  $("#sync").click(function(){
+  $(document).on('precisaSincronizar', function(){
     var listaCartao = []
 
     $('.cartao').each(function(){
@@ -38,6 +38,10 @@ function(resposta){
           console.log('Deu ruim');
         }
       })
+
+    })
+    $("#sync").click(function(){
+      $(document).trigger('precisaSincronizar')
 
     })
   })()

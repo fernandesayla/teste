@@ -8,12 +8,25 @@ var controladorDeCartao=(function() {
     contador++
     var	tipoCartao = decideTipoCartao(conteudo);
     var cartao = $('<div>').addClass('cartao').addClass(tipoCartao).attr('id','cartao_'+contador).css('background', cor)
+    .click(function(event){
+      var elemento= $(event.target)
+      if(elemento.hasClass('opcoesDoCartao-edita')){
+        ehPraEdita(this)
+      }
+
+    })
+
+
+    var btnEdit = $('<button>').addClass('opcoesDoCartao-edita opcoesDoCartao-opcao').attr('data-ref',contador)
+    .text('X')
+
     var divBtnRemove = $('<div>').addClass('opcoesDoCartao')
 
-    var btnRemove = $('<button>').addClass('opcoesDoCartao-remove opcoesDoCartao-opcao').attr('data-ref',contador).text('X').click(removeCartao)
-    var tagConteudo = $('<p>').addClass('cartao-conteudo').append(conteudo)
+    var btnRemove = $('<button>').addClass('opcoesDoCartao-remove opcoesDoCartao-opcao').attr('data-ref',contador)
+    .text('X').click(removerCartao.removeCartao)
+    var tagConteudo = $('<p>').addClass('cartao-conteudo').append(conteudo).attr('contenteditable',false)
 
-    cartao.append(divBtnRemove.append(btnRemove)).append(tagConteudo).prependTo('.mural')
+    cartao.append(divBtnRemove.append(btnRemove).append(btnEdit)).append(tagConteudo).prependTo('.mural')
 
     $('.novoCartao-conteudo').val('')
 
@@ -22,7 +35,21 @@ var controladorDeCartao=(function() {
   }
   //window.adicionaCartao = adicionaCartao
 
+  function ehPraEdita(cartao){
+    var tagConteudo = $(cartao).find('.cartao-conteudo')
+    if(tagConteudo.attr('contenteditable')== 'true'){
+      tagConteudo.attr('contenteditable','false')
+      tagConteudo.blur()
 
+    }else{
+      tagConteudo.attr('contenteditable','true')
+      tagConteudo.focus()
+
+    }
+    $(document).trigger('precisaSincronizar')
+
+
+  }
   function	decideTipoCartao(conteudo){
     var	quebras	=	conteudo.split("<br>").length;
     var	totalDeLetras	=	conteudo.replace(/<br>/g,	"	").length;
@@ -46,8 +73,8 @@ var controladorDeCartao=(function() {
   }
 
   return {
-      adicionaCartao:adicionaCartao,
-      idUltimoCartao:contador
+    adicionaCartao:adicionaCartao,
+    idUltimoCartao:contador
   }
 
 
